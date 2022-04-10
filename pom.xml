@@ -43,7 +43,6 @@
         <developerConnection>
             scm:git:git@github.com:jstolorz/bluesoft.git
         </developerConnection>
-      <tag>HEAD</tag>
   </scm>
 
 
