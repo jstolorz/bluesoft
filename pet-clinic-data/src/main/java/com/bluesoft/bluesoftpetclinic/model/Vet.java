@@ -1,5 +1,5 @@
 package com.bluesoft.bluesoftpetclinic.model;
 
-class Vet extends Person {
+public class Vet extends Person {
 
 }
