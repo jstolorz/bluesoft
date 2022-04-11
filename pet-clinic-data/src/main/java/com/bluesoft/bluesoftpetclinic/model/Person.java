@@ -1,6 +1,6 @@
 package com.bluesoft.bluesoftpetclinic.model;
 
-class Person {
+class Person extends BaseEntity {
     private String firstName;
     private String lastName;
 
