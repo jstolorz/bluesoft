@@ -1,17 +1,11 @@
 package com.bluesoft.bluesoftpetclinic.bootstrap;
 
 import com.bluesoft.bluesoftpetclinic.model.Owner;
-import com.bluesoft.bluesoftpetclinic.model.Pet;
-import com.bluesoft.bluesoftpetclinic.model.PetType;
 import com.bluesoft.bluesoftpetclinic.model.Vet;
 import com.bluesoft.bluesoftpetclinic.services.OwnerService;
 import com.bluesoft.bluesoftpetclinic.services.VetService;
-import com.bluesoft.bluesoftpetclinic.services.map.OwnerServiceMap;
-import com.bluesoft.bluesoftpetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
-import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -19,14 +13,13 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(final OwnerService ownerService, final VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
             loadData();
     }
 
