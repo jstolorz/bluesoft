@@ -7,27 +7,27 @@ public class Pet extends BaseEntity{
     private Owner owner;
     private LocalDate birthDate;
 
-    PetType getPetType() {
+    public PetType getPetType() {
         return petType;
     }
 
-    void setPetType(final PetType petType) {
+    public void setPetType(final PetType petType) {
         this.petType = petType;
     }
 
-    Owner getOwner() {
+    public Owner getOwner() {
         return owner;
     }
 
-    void setOwner(final Owner owner) {
+    public void setOwner(final Owner owner) {
         this.owner = owner;
     }
 
-    LocalDate getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    void setBirthDate(final LocalDate birthDate) {
+    public void setBirthDate(final LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 }
